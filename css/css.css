@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	margin: 10px;
+	text-align: center;
+}
+
+.content{
+	font-family: Verdana,sans-serif;
+	width: 98%;
+	margin: auto;
+}
+
+.table{
+	border: 1px solid #DFDFDF;
+	background-color: #F9F9F9;
+	width: 95%;
+	margin: auto;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #333;
+}
+
+.table td, .table th {
+	border-top-color: white;
+	border-bottom: 1px solid #DFDFDF;
+	color: #555;
+}
+
+.table th {
+	text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+	font-weight: normal;
+	padding: 7px 7px 8px;
+	text-align: left;
+	line-height: 1.3em;
+	font-size: 14px;
+}
+
+.table td {
+	font-size: 12px;
+	padding: 4px 7px 2px;
+	vertical-align: middle;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.input_text{
+	border-radius: 5px;
+	height: 40px;
+	padding: 3px;
+	border: 1px solid #ccc;
+	width: 95%;
+}
+
+.input_select{
+	border-radius: 5px;
+	height: 40px;
+	padding: 3px;
+	border: 1px solid #ccc;
+	width: 98%;	
+}
+
+.label_td{
+	background-color: #e2e2e2;
+	height: 50px;
+	width: 14%;
+}
+
+
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+	.table td {
+		font-size: 12px;
+		padding: 4px 7px 2px;
+		vertical-align: middle;
+		text-align: left;
+		margin-right: 10px;
+	}
+
+	.label_td{
+		text-align: left;
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		width: 95.5%;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+		border: 1px solid #ccc; 
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
